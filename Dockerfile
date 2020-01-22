@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as build-env
 WORKDIR /app
 
 # copy proj and restore packages
-COPY myapp.csproj ./
+COPY app/myapp.csproj ./
 RUN dotnet restore
 
 # copy files and build release
